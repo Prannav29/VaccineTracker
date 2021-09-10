@@ -23,8 +23,8 @@ public class Chalja {
                System.out.println("preparing to send message ...");
                String message = " Vaccine is available\n" + centers.stream().map(Center::getAddress /* Method reference */ ).collect(Collectors.joining("\n"));
                String subject = "COWIN : Confirmation";
-               String to = "prannav.chawla@gmail.com";
-               String from = "prannav.accomplish@gmail.com";
+               String to = "#enter_receiversemailid";
+               String from = "#enter_sendersemailid";
                sendEmail(message,subject,to,from);
                System.out.println("It's Available");
            }
@@ -60,7 +60,7 @@ public class Chalja {
         Session session=Session.getInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("prannav.accomplish@gmail.com", "i##msaved29");
+                return new PasswordAuthentication("#enter_sendersemailid", "#enter_senderspassword");
             }
         });
 
